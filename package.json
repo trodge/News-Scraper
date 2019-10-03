@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-      "express": "latest",
-      "express-handlebars": "latest",
-      "mongoose": "latest",
-      "cheerio": "latest",
-      "axios": "latest"
+    "axios": "latest",
+    "cheerio": "latest",
+    "express": "latest",
+    "express-handlebars": "latest",
+    "mongoose": "latest"
   }
 }

@@ -34,9 +34,11 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const handlebars = express_handlebars();
-
-app.engine('handlebars', handlebars);
+app.engine('handlebars', express_handlebars({
+    helpers: {
+        cat: (str1, str2) => str1 + str2
+    }
+}));
 app.set('view engine', 'handlebars');
 
 mongoose.set('useNewUrlParser', true);

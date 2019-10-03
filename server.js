@@ -69,7 +69,7 @@ mongoose.connect(MONGODB_URI, (err) => {
         });
         await Article.insertMany(articles, { ordered: false }).catch(err => console.log(err));
         const results = await Article.find();
-        res.render('index', { articles: results, site: NEWS_SITE });
+        res.render('index', { articles: results, news: NEWS_SITE });
     });
     app.listen(process.env.PORT || 8080, () => console.log('Listening'));
 });
